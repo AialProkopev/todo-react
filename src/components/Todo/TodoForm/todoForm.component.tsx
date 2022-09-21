@@ -1,10 +1,16 @@
-import React, { useEffect, useRef, useState } from "react"
+import {
+  ChangeEvent,
+  FC,
+  KeyboardEvent,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 import styles from "./styles.module.scss"
 import { useAppDispatch } from "../../../store/hooks"
 import { addTodo } from "../../../store/actions"
 
-interface Props {}
-export const TodoForm: React.FC<Props> = () => {
+export const TodoForm: FC = () => {
   const [inputValue, setInputValue] = useState<string>("")
   const dispatch = useAppDispatch()
   const inputRef = useRef<HTMLInputElement>(null)
@@ -13,14 +19,14 @@ export const TodoForm: React.FC<Props> = () => {
     inputRef.current && inputRef.current.focus()
   }, [])
 
-  const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) =>
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) =>
     setInputValue(e.target.value)
 
   const handleAddTodo = () => {
     dispatch(addTodo(inputValue))
     setInputValue("")
   }
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     e.key === "Enter" && inputValue && handleAddTodo()
   }
 

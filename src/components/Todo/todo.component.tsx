@@ -1,4 +1,3 @@
-import React, { useState } from "react"
 import { TodoForm } from "./TodoForm/todoForm.component"
 import { TodoList } from "./TodoList/todoList.component"
 

@@ -1,11 +1,9 @@
-import React from "react"
+import { FC } from "react"
 import { useAppSelector } from "../../../store/hooks"
 import { TodoItem } from "../TodoItem/todoItem.component"
 
-interface Props {}
-export const TodoList: React.FC<Props> = () => {
+export const TodoList: FC = () => {
   const todos = useAppSelector((state) => state.todosReducer.todos)
-  console.log(todos)
 
   return (
     <section>
