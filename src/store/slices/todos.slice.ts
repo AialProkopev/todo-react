@@ -48,6 +48,9 @@ const todosSlice = createSlice({
                     }
                 }
             }
+        },
+        completeTodo: (state, action: PayloadAction<string>) => {
+            
         }
     }
 })

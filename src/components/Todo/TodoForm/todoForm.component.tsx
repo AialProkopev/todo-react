@@ -6,7 +6,7 @@ import {
   useRef,
   useState,
 } from "react"
-import styles from "./styles.module.scss"
+import styles from "./todoform.module.scss"
 import { useAppDispatch } from "../../../store/hooks"
 import { addTodo } from "../../../store/actions"
 
@@ -27,7 +27,7 @@ export const TodoForm: FC = () => {
     setInputValue("")
   }
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    e.key === "Enter" && inputValue && handleAddTodo()
+    e.key === "Enter" && inputValue && inputValue.trim() && handleAddTodo()
   }
 
   return (
@@ -39,10 +39,12 @@ export const TodoForm: FC = () => {
         value={inputValue}
         onChange={handleChangeInput}
         onKeyDown={handleKeyDown}
+        maxLength={48}
+        placeholder="Type here..."
       />
       <button
         className={styles.todoForm__add}
-        disabled={inputValue ? false : true}
+        disabled={inputValue && inputValue.trim() ? false : true}
         onClick={handleAddTodo}
       >
         Add
