@@ -1,0 +1,16 @@
+@import '../../../styles/color.variable.scss';
+
+.todoForm {
+  width: 80%;
+  min-height: 2.5rem;
+  display: flex;
+}
+.todoForm__input {
+  width: 80%;
+  &:focus {
+    border: 1px solid $black-color;
+  }
+}
+.todoForm__add {
+  width: 20%;
+}

@@ -1,7 +1,9 @@
-import { addTodo, removeTodo, changeTodo } from "./reducers/todos.slice";
+import { addTodo, removeTodo, changeTodo } from "./slices/todos.slice";
+import { addCompletedTodo } from "./slices/completedTodos.slice";
 
 export {
   addTodo, 
   removeTodo, 
-  changeTodo
+  changeTodo,
+  addCompletedTodo
 }

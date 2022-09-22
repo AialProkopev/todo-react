@@ -1,15 +1,14 @@
-import React from "react"
+import { FC } from "react"
 import { useAppSelector } from "../../../store/hooks"
 import { TodoItem } from "../TodoItem/todoItem.component"
+import styles from "./todolist.module.scss"
 
-interface Props {}
-export const TodoList: React.FC<Props> = () => {
-  const todos = useAppSelector((state) => state.todosReducer.todos)
-  console.log(todos)
+export const TodoList: FC = () => {
+  const { todos } = useAppSelector((state) => state.todos)
 
   return (
-    <section>
-      <ul>
+    <section className={styles.todoList}>
+      <ul className={styles.todoList__list}>
         {todos.map((item) => (
           <TodoItem todo={item} key={item.id} />
         ))}
