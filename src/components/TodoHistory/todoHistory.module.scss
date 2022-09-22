@@ -1,0 +1,21 @@
+@import '../../styles/color.variable.scss';
+
+.todoHistory {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: $white-color;
+  border-radius: 10px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.todoHistory__title {
+  font-weight: 600;
+}
+.todoHistory__list {
+  width: 100%;
+}

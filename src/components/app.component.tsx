@@ -1,10 +1,13 @@
 import React from "react"
 import { Todo } from "./Todo/todo.component"
+import { TodoHistory } from "./TodoHistory/todoHistory.component"
 
 export const App = () => {
   return (
-    <div className="wrapper">
+    <main className="main">
+      <h1>to do app</h1>
       <Todo />
-    </div>
+      <TodoHistory />
+    </main>
   )
 }

@@ -40,14 +40,14 @@ export const TodoForm: FC = () => {
         onChange={handleChangeInput}
         onKeyDown={handleKeyDown}
         maxLength={40}
-        placeholder="Type here..."
+        placeholder="type here..."
       />
       <button
         className={styles.todoForm__add}
         disabled={inputValue && inputValue.trim() ? false : true}
         onClick={handleAddTodo}
       >
-        Add
+        add
       </button>
     </section>
   )

@@ -4,21 +4,30 @@
   box-sizing: border-box;
 }
 html {
-  font: 500 16px/1 'Inter', sans-serif;
+  font: 400 16px/1 'Inter', sans-serif;
 }
 body {
   min-height: 100vh;
   background-color: $main-color;
 }
 input {
-  font: 500 16px/1 'Inter', sans-serif;
+  font: 400 16px/1 'Inter', sans-serif;
   padding-left: 2px;
 }
 button {
-  font: 500 16px/1 'Inter', sans-serif;
+  font: 400 16px/1 'Inter', sans-serif;
   cursor: pointer;
 }
-.wrapper {
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $white-color;
+}
+.main {
+  position: relative;
   width: 100%;
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }

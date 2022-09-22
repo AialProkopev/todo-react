@@ -61,7 +61,7 @@ export const TodoItem: FC<Props> = ({ todo }) => {
           onClick={handleClickCheckbox}
         />
         <span className={styles.checkbox__tooltip}>
-          Do you want to complete the task?
+          do you want to complete the task?
         </span>
       </div>
 
@@ -85,10 +85,10 @@ export const TodoItem: FC<Props> = ({ todo }) => {
         className={styles.todoItem__edit}
         onClick={handleChangeEditMode}
       >
-        {isEditMode ? "Confirm" : "Edit"}
+        {isEditMode ? "confirm" : "edit"}
       </button>
       <button className={styles.todoItem__delete} onClick={handleDeleteTodo}>
-        Delete
+        delete
       </button>
     </li>
   )
