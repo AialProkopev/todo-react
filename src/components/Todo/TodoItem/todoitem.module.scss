@@ -3,10 +3,34 @@
 .todoItem {
   width: 100%;
   height: 2.5rem;
-  // border: 1px solid $black-color;
   border-radius: 2px;
   display: flex;
   align-items: center;
+}
+.todoItem__checkbox {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.checkbox__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.checkbox__tooltip {
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+  left: 2px;
+  top: -16px;
+  font-size: 12px;
+  font-weight: 400;
+  visibility: hidden;
+}
+.checkbox__wrapper:hover .checkbox__tooltip {
+  visibility: visible;
 }
 .todoItem__input {
   width: 70%;

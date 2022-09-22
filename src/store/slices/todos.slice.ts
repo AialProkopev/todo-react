@@ -5,12 +5,13 @@ export interface Todo {
   title: string,
 }
 interface Todos {
-  todos : Array<Todo>
+    todos: Array<Todo>
 }
 
-const initialState:Todos = {
-    todos : []
+const initialState: Todos = {
+    todos: []
 }
+
 type GenerateId = () => string
 
 const generateId: GenerateId = () => Math.random().toString(16).slice(2) + new Date().getTime().toString(36)
@@ -48,9 +49,6 @@ const todosSlice = createSlice({
                     }
                 }
             }
-        },
-        completeTodo: (state, action: PayloadAction<string>) => {
-            
         }
     }
 })
@@ -58,7 +56,7 @@ const todosSlice = createSlice({
 export const {
     addTodo,
     removeTodo,
-    changeTodo
+    changeTodo,
 } = todosSlice.actions;
 
-export const todosReducer = todosSlice.reducer;
+export default todosSlice.reducer;

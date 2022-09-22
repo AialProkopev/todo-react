@@ -8,6 +8,7 @@ import {
   useState,
 } from "react"
 import { useDispatch } from "react-redux"
+import { addCompletedTodo } from "../../../store/actions"
 import { changeTodo, removeTodo, Todo } from "../../../store/slices/todos.slice"
 import styles from "./todoitem.module.scss"
 
@@ -44,14 +45,31 @@ export const TodoItem: FC<Props> = ({ todo }) => {
       handleChangeEditMode()
     }
   }
+  const handleClickCheckbox = () => {
+    setTimeout(() => {
+      dispatch(addCompletedTodo(todo))
+      dispatch(removeTodo(todo.id))
+    }, 500)
+  }
 
   return (
     <li className={styles.todoItem}>
+      <div className={styles.checkbox__wrapper}>
+        <input
+          type="checkbox"
+          className={styles.todoItem__checkbox}
+          onClick={handleClickCheckbox}
+        />
+        <span className={styles.checkbox__tooltip}>
+          Do you want to complete the task?
+        </span>
+      </div>
+
       {isEditMode ? (
         <input
           className={styles.todoItem__input}
           type="text"
-          maxLength={48}
+          maxLength={40}
           ref={inputRef}
           value={inputValue}
           onChange={handleChangeInput}

@@ -39,7 +39,7 @@ export const TodoForm: FC = () => {
         value={inputValue}
         onChange={handleChangeInput}
         onKeyDown={handleKeyDown}
-        maxLength={48}
+        maxLength={40}
         placeholder="Type here..."
       />
       <button

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { todosReducer } from './slices/todos.slice'
+import todosSlice from './slices/todos.slice'
+import completedTodosSlice from './slices/completedTodos.slice'
 
 export const store = configureStore({
   reducer: {
-    todosReducer
+    todos: todosSlice,
+    completedTodos: completedTodosSlice
   },
 })
 

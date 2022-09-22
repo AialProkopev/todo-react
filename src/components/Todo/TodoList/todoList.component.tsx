@@ -4,7 +4,7 @@ import { TodoItem } from "../TodoItem/todoItem.component"
 import styles from "./todolist.module.scss"
 
 export const TodoList: FC = () => {
-  const todos = useAppSelector((state) => state.todosReducer.todos)
+  const { todos } = useAppSelector((state) => state.todos)
 
   return (
     <section className={styles.todoList}>
