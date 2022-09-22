@@ -14,3 +14,8 @@
 .todoForm__add {
   width: 20%;
 }
+@media screen and (max-width: 1300px) {
+  .todoForm {
+    width: 96%;
+  }
+}

@@ -19,3 +19,10 @@
 .todoHistory__list {
   width: 100%;
 }
+
+@media screen and (max-width: 1300px) {
+  .todoHistory {
+    position: static;
+    border-radius: 0;
+  }
+}

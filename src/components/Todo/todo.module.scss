@@ -14,3 +14,9 @@
   font-size: 2rem;
   font-weight: 500;
 }
+@media screen and (max-width: 1300px) {
+  .todo {
+    width: 100%;
+    border-radius: 0;
+  }
+}
