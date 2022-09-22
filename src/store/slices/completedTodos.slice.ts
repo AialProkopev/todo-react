@@ -17,6 +17,7 @@ const completedTodosSlice = createSlice({
     }
   }
 })
+
 export const {
   addCompletedTodo
 } = completedTodosSlice.actions
